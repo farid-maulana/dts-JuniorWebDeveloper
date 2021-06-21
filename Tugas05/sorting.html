@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting</title>
+</head>
+<body id="body">
+    <h3>Array alfabet : [d, t, s, p, o, l, i, n, e, m, a]</h3>
+    <h3>Array angka : [0, 2, 1, 0, 2, 0, 2, 0]</h3>
+    <button onclick="sorting()">Urutkan</button>
+
+    <script>
+        function sorting() {
+            var alfabet = ['d', 't', 's', 'p', 'o', 'l', 'i', 'n', 'e', 'm', 'a']
+            var angka = [0, 2, 1, 0, 2, 0, 2, 0];
+
+            sortAlfabet = alfabet.sort()
+            sortAngka = angka.sort()
+
+            var h4Alfabet = document.createElement("h4")
+            var h4Angka = document.createElement("h4")
+            var nodeAlfabet = document.createTextNode('Alfabet = ' + sortAlfabet)
+            var nodeAngka = document.createTextNode('Angka = ' + sortAngka)
+            h4Alfabet.appendChild(nodeAlfabet)
+            h4Angka.appendChild(nodeAngka)
+            document.getElementById("body").appendChild(h4Alfabet)
+            document.getElementById("body").appendChild(h4Angka)
+            
+            console.log('Angka dan huruf berhasil di urutkan')
+            alert('Angka dan huruf berhasil di urutkan')
+        }
+    </script>
+</body>
+</html>

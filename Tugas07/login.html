@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validasi Login</title>
+    <link rel="stylesheet" href="tampilan.css">
+</head>
+<body>
+    <div class="container">
+        <form action="" class="form">
+          <div class="error" style="display: none"></div>
+    
+          <div class="input-field">
+            <label for="email">Email</label>
+            <input type="text" id="email" />
+          </div>
+    
+          <div class="input-field">
+            <label for="password">Password</label>
+            <input type="password" id="password" />
+          </div>
+    
+          <input type="submit" value="Login">
+          <script>
+                var $form = document.querySelector('.form');
+                var $error = document.querySelector('.error');
+                var $inputFields = document.querySelectorAll('.input-field');
+                var $email = document.getElementById('email');
+                var $password = document.getElementById('password');
+
+                function addError(message) {
+                    $error.innerHTML = message;
+                    $error.style.display = 'block';
+                }
+
+                function removeError() {
+                    $error.innerHTML = '';
+                    $error.style.display = 'hidden';
+                }
+
+                function validate(event) {
+                // event.preventDefault() untuk tidak menjalankan fungsi form apabila di submit, yaitu mengirim data ke 'action'.
+                    event.preventDefault();
+                    $error.style.display = 'none';
+
+                    if ($email.value !== 'admin@example.com' || $password.value !== 'password') {
+                        addError('Email atau password salah');
+                    } else {
+                        removeError();
+                        location.replace("menu.html")
+                    }
+                }
+
+                $form.addEventListener('submit', validate);
+          </script>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luas Lingkaran</title>
+</head>
+<body>
+    <div id="dv">
+        <h1>Menghitung Luas Lingkaran</h1>
+        <label for="jari-jari">Masukkan jari-jari lingkaran: </label>
+        <input type="text" name="jari-jari" id="jari-jari">
+        <button onclick="hitungLuas()">Hitung Luas</button>
+    </div>
+
+    <script>
+        function hitungLuas() {
+            // deklarasi konstanta phi
+            const phi = 3.14;
+            // mendapatkan nilai jari-jari
+            var r = document.getElementById('jari-jari').value
+            // menghitung luas dan disimpan di variabel luas
+            var luas = phi * r * r;
+
+            // Membuat elemen <h4>
+            var h4 = document.createElement("h4")
+            var node = document.createTextNode('Luas lingkaran = ' + luas)
+            // memasukkan text dalam element <h4> baru
+            h4.appendChild(node)
+            // menambahkan <h4> baru pada div id = dv
+            document.getElementById("dv").appendChild(h4)
+        }
+    </script>
+</body>
+</html>

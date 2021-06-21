@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitung Luas</title>
+</head>
+<body>
+    <script>
+        var nama = prompt("Jenis bangun (persegi/persegi panjang)?", "")
+
+        if (nama == "persegi") {
+            var sisi = prompt("Masukkan panjang sisi")
+            var luas = sisi * sisi
+            alert(luas)
+            console.log(luas)
+        } else if (nama == "persegi panjang") {
+            var panjang = prompt("Masukkan panjang")
+            var lebar = prompt("Masukkan lebar")
+            var luas = panjang * lebar
+            alert(luas)
+            console.log(luas)
+        } else {
+            alert("Inputan salah")
+        }
+    </script>
+</body>
+</html>
